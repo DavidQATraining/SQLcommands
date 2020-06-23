@@ -1,0 +1,10 @@
+CREATE DATABASE IF NOT EXISTS world;
+
+USE world;
+
+source world.sql;
+
+show databases;
+
+shot tables;
+
