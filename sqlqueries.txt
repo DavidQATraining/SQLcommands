@@ -36,6 +36,19 @@ select f_name, l_name as People older than 30 from person where age>=30;
 
 select * from person as 3 guys limit 3 order by age desc;
 
+select count(person_id) from person;
 
+select sum(population) from world;
 
+select min(population) from world;
+
+select max(population) from world;
+
+select avg(population) from world;
+
+select fk_orderID, sum(quantity) as totalQuantity from orderline group by fs_orderID;
+
+select orders.orderID, customer.fname from orders join customer on orders.fk_customerID=customer.customerID;
+
+select o.order, c.fname from orders o join customer c on o.fk_customerID=c.customerID order by o.orderID;
 
