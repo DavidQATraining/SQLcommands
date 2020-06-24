@@ -15,3 +15,14 @@ drop table [tableName];
 describe [tableName];
 
 alter table person add constraint primary key [columnName];
+
+insert into [tableName];
+
+select * from [tableName];
+
+update from person set l_name='Lennon' where person_id=1;
+
+delete from person where person_id where person_id=1;
+ 
+insert into person values(1, 'David', 'McCartney', 29);
+
