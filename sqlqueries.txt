@@ -1,0 +1,17 @@
+CREATE DATABASE IF NOT EXISTS world;
+
+USE world;
+
+source world.sql;
+
+show databases;
+
+shot tables;
+
+alter table [tableName] drop column [columnName];
+
+drop table [tableName];
+
+describe [tableName];
+
+alter table person add constraint primary key [columnName];
