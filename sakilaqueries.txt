@@ -1,0 +1,30 @@
+1. select * from actor;
+2. select * from actor where first_name='john';
+3. select * from actor where last_name='neeson';
+4. select * from actor where (actor_id % 10) =0;
+5. select description from film where film_id=100;
+6. select * from film where rating='R';
+7. select * from film where rating!='R';
+8. select * from film order by length limit 10 \G;
+9. select title from film \G;
+10. select * from film where special_features like '%Deleted Scenes%' \G;
+11. select distinct first_name from actor;
+12. SELECT last_name, COUNT(last_name) FROM actor GROUP BY last_name HAVING COUNT(col) > 1;
+13. select select fa.actor_id, count(fa.actor_id), a.first_name
+    from film_actor fa join actor a on fa.actor_id=a.actor_id
+    group by fa.actor_id 
+    order by count(fa.actor_id desc limit 1;
+14. select * from inventory where film_id =1 and store _id =1;
+15. select return_date from rental where inventory_id in(1, 2, 3, 4) \G;
+16. select avg(length) from film \G;
+17. select c.name , avg(f.length)
+    from category c, film_category fc, film f
+    where c.category_id=fc.category_id
+    and f.film_id=fc.film_id
+    group by c.name \G;
+18. select count(film_id from where description like '%Robot%' \G;
+19. select title, length from film oder by length desc \G;
+20. select count(release_year) from film where release_year=2006 \G;
+21. select title from film_list where category='Horror' \G;
+22. select concat(first_name,' ',last_name) from staff where staff_id=1;
+
