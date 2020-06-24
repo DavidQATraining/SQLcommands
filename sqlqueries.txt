@@ -26,3 +26,16 @@ delete from person where person_id where person_id=1;
  
 insert into person values(1, 'David', 'McCartney', 29);
 
+select f_name, l_name from person;
+
+select distinct age from person;
+
+select f_name, l_name from person where age>27;
+
+select f_name, l_name as People older than 30 from person where age>=30;
+
+select * from person as 3 guys limit 3 order by age desc;
+
+
+
+
