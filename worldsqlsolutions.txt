@@ -1,0 +1,17 @@
+1. select count)countrycode) from city where countrycode='USA';
+2. select population, lifeexpectancy from country where code='ARG' \G;
+3. select code, lifeexpectancy from country where 
+   lifeexpectancy is not null order by lifeexpectancy desc limit 1 \G;
+4. select ci.name from city ci join country co on co.capital=ci.id where co.code='ESP' \G
+5. select cl.language from countrylanguage cl join country c on cl.countrycode=c.code
+   where c.region='Southeast Asia' \G;
+6. select name from city where name like 'F%' \G;
+7. select count(id) from city where countrycode='CHN' \G;
+8. select code, popualtion from country where population >=1
+   and population is not null
+   order by population desc \G;
+9. select count(code) from country;
+10. select name, surfacearea from country order by surfacearea desc limit 10 \G;
+11. select name, population from city where countrycode='JPN' limit 5 \G;
+12. select name, code from country where headofstate='elisabeth II' \G;
+13. 
