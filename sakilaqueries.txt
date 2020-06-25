@@ -22,9 +22,24 @@
     where c.category_id=fc.category_id
     and f.film_id=fc.film_id
     group by c.name \G;
-18. select count(film_id from where description like '%Robot%' \G;
+18. select count(film_id) from where description like '%Robot%' \G;
 19. select title, length from film oder by length desc \G;
 20. select count(release_year) from film where release_year=2006 \G;
 21. select title from film_list where category='Horror' \G;
 22. select concat(first_name,' ',last_name) from staff where staff_id=1;
-
+23. select * from nicer_but_slower_film_list where actors like '%Fred Costner%' \G;
+24. select store_id from inventory where film_id=103 order by store_id;
+25. select count(distinct(country)) from country \G;
+25.1 select name from language order by name \G; 
+26. select concat first_name,' ',last_name) from actor where
+    last_name like '%son%'
+    order by first_name \G;
+27. select category, count(*) as NoOfFilms from film_list group by category;
+28. select fa.actor_id, count(fa.actor_id), a.first_name
+    from film_actor fa join actor a on fa.actor_id=a.actor_id
+    group by fa.actor_id
+    order by count(fa.actor_id) desc;
+29. select fa.actor_id, count(fa.actor_id), a.first_name
+    from film_actor fa join actor a on fa.actor_id=a.actor_id
+    group by fa.actor_id
+    order by count(fa.actor_id) desc limit 1;
