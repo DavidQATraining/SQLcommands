@@ -1,5 +1,5 @@
-1. select count)countrycode) from city where countrycode='USA';
-2. select population, lifeexpectancy from country where code='ARG' \G;
+1. select count(countrycode) from city where countrycode='USA';
+2. select population, avg(lifeexpectancy) from country where code='ARG' \G;
 3. select code, lifeexpectancy from country where 
    lifeexpectancy is not null order by lifeexpectancy desc limit 1 \G;
 4. select ci.name from city ci join country co on co.capital=ci.id where co.code='ESP' \G
@@ -14,4 +14,10 @@
 10. select name, surfacearea from country order by surfacearea desc limit 10 \G;
 11. select name, population from city where countrycode='JPN' limit 5 \G;
 12. select name, code from country where headofstate='elisabeth II' \G;
-13. 
+13. select name, (population/surfacearea as popratio from country order by popratio asc limit 10;
+14. select distinct language from countrylanguage;
+15. select * from country order by GNP desc limit 10;
+17. select * from countrylanguage where language='French' and percentage > 50;
+18. select * from country where lifeexpectancy is not null order by lifeexpectancy asc limit1;
+19. select * select govermentform, count(*) from country group by governmentform order by count(*) desc limit 1;
+20. select count(*) from country where indepyear is not null;
