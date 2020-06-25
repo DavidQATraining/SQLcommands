@@ -1,0 +1,18 @@
+touch #creates file 
+[variablename]=$(command) # stores a command into a variable
+echo $variablename # calls the info stored on the variable
+who # whos is using the system
+history # shows history of commands
+uname -r # shows system information
+ps # prints out currrently running processes
+top # also prints out detailed runing porcesses crtl+c to exit
+htop # shows more detailed processes
+kill -9 [processid] # kill process
+cat [filename] #prints the contents of the file
+nano takes you to text editor
+cat.text | grep [searching word] # grep is a look up
+wc [filename]  # word count on chosen file
+head [filename] # show first art of document
+more [filename] # shows more from the document after head
+tail [filename] # read the file from the bottom
+
